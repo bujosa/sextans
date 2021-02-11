@@ -11,6 +11,8 @@ export const CommentCreate = ({ postId }) => {
   const onSubmit = async (event) => {
     event.preventDefault();
     await helperComment(`posts/${postId}/comments`, { content }, "POST");
+
+    setContent("");
   };
 
   return (

@@ -5,7 +5,7 @@ export const PostCreate = () => {
     <div>
       <form>
         <div className="form-group">
-          <label>Title</label>
+          <label>Title </label>
           <input className="form-control"></input>
         </div>
         <button className="btn btn-primary">Submit</button>

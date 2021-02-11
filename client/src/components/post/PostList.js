@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { helper } from "../../helpers/helper";
 import { CommentCreate } from "../comment/CommentCreate";
+import { CommentList } from "../comment/CommentList";
 
 export const PostList = () => {
   const [posts, setPosts] = useState({});
@@ -22,6 +23,7 @@ export const PostList = () => {
         key={post.id}>
         <div className="card-body">
           <h3>{post.title}</h3>
+          <CommentList postId={post.id} />
           <CommentCreate postId={post.id} />
         </div>
       </div>

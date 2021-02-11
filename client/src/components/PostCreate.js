@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { helper } from "../helpers/helper";
 
 export const PostCreate = () => {
   const [title, setTitle] = useState("");
@@ -10,9 +10,7 @@ export const PostCreate = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/posts", {
-      title,
-    });
+    await helper("posts", { title }, "POST");
     setTitle("");
   };
 

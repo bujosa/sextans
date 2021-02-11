@@ -24,7 +24,7 @@ export const PostCreate = () => {
           <input
             value={title}
             onChange={onChange}
-            pnchaclassName="form-control"></input>
+            className="form-control"></input>
         </div>
         <button className="btn btn-primary">Submit</button>
       </form>

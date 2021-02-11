@@ -5,12 +5,12 @@ const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
 const commentsByPostId = {};
 
 app.get("/posts/:id/comments", (req, res) => {
-  res.send(commentsByPostId[req.params.id] || []);
+  res.send(commentsByPostISd[req.params.id] || []);
 });
 
 app.post("/posts/:id/comments", (req, res) => {

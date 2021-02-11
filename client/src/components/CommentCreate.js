@@ -22,6 +22,7 @@ export const CommentCreate = ({ postId }) => {
           <label>New Comment</label>
           <input value={content} className="form-control" onChange={onChange} />
         </div>
+        <br />
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>

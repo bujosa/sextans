@@ -8,8 +8,8 @@ export const PostCreate = () => {
     setTitle(target.value);
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
     await helper("posts", { title }, "POST");
     setTitle("");
   };
@@ -24,6 +24,7 @@ export const PostCreate = () => {
             onChange={onChange}
             className="form-control"></input>
         </div>
+        <br />
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>

@@ -6,7 +6,29 @@ export const PostList = () => {
 
   const fetchPosts = async () => {
     const res = await helper("posts");
+    setPosts(res.data);
   };
 
-  return <div></div>;
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  const renderedPosts = Object.values(posts).map((post) => {
+    return (
+      <div
+        className="card"
+        style={{ width: "30%", marginBottom: "20px" }}
+        key={post.id}>
+        <div className="card-body">
+          <h3>{post.title}</h3>
+        </div>
+      </div>
+    );
+  });
+
+  return (
+    <div className="d-flex flex-row flex-wrap justify-content-between">
+      {renderedPosts}
+    </div>
+  );
 };

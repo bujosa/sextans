@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { helper } from "../helpers/helper";
+import { helper } from "../../helpers/helper";
 
 export const PostCreate = () => {
   const [title, setTitle] = useState("");

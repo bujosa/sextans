@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { helperComment } from "../helpers/helper";
+import { helperComment } from "../../helpers/helper";
 
 export const CommentCreate = ({ postId }) => {
   const [content, setContent] = useState("");

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { helper } from "../../helpers/helper";
-import { CommentCreate } from "../CommentCreate";
+import { CommentCreate } from "../comment/CommentCreate";
 
 export const PostList = () => {
   const [posts, setPosts] = useState({});

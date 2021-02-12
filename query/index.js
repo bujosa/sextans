@@ -37,6 +37,8 @@ app.post("/events", (req, res) => {
     comment.content = content;
   }
 
+  console.log(posts);
+
   res.send({});
 });
 

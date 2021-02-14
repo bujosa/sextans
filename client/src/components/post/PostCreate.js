@@ -10,7 +10,7 @@ export const PostCreate = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    await helper("posts", { title }, "POST");
+    await helper("posts/create", { title }, "POST");
     setTitle("");
   };
 

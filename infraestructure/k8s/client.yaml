@@ -1,31 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: comments-deployment
+  name: client-deployment
 spec:
   replicas: 1
   selector: 
     matchLabels:
-      app: comments
+      app: client
   template:
     metadata:
       labels:
-        app: comments
+        app: client
     spec:
       containers:
-        - name: comments
-          image: bujosa/comments
+        - name: client
+          image: bujosa/client
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: comments-service   
+  name: client-service   
 spec:
   selector:
-    app: comments
+    app: client
   ports:
-    - name: comments
+    - name: client
       protocol: TCP
-      port: 4001
-      targetPort: 4001
-
+      port: 3000
+      targetPort: 3000

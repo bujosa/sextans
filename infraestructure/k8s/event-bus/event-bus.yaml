@@ -21,7 +21,6 @@ kind: Service
 metadata:
   name: events-service   
 spec:
-  type: NodePort
   selector:
     app: events
   ports:

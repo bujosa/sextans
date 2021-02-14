@@ -21,7 +21,6 @@ kind: Service
 metadata:
   name: posts-service   
 spec:
-  type: NodePort
   selector:
     app: posts
   ports:

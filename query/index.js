@@ -53,8 +53,10 @@ app.listen(4002, async () => {
     .catch((err) => {
       console.log(err.message);
     });
-  for (let event of res.data) {
-    console.log("Processing event:", event.type);
-    handleEvent(event.type, event.data);
+  if (res) {
+    for (let event of res.data) {
+      console.log("Processing event:", event.type);
+      handleEvent(event.type, event.data);
+    }
   }
 });
